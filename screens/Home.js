@@ -1,19 +1,15 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import { StyleSheet } from 'react-native'
+import { global } from '../styles/global'
 
 const Home = () => {
   return (
-    <View>
+    <View style={global.container}>
       <Text>Home</Text>
     </View>
   )
 }
 
-const styles = StyleSheet.create({
-    container: {
-        padding: 30
-    }
-})
+
 
 export default Home
