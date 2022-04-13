@@ -1,7 +1,13 @@
 # nativeApp-with-navitation
 
-// react native navigations
+## react native navigations
+
 npm install @react-navigation/native
 
-// Installing dependencies into an Expo managed project​
+## Installing dependencies into an Expo managed project​
+
 expo install react-native-screens react-native-safe-area-context
+
+## Installing the native stack navigator library
+
+npm install @react-navigation/native-stack
