@@ -1,6 +1,7 @@
 import { View, Text, FlatList, TouchableOpacity } from 'react-native'
 import React, {useState} from 'react'
 import { global } from '../styles/global'
+import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes'
 
 const Home = ({navigation}) => {
 
@@ -12,11 +13,11 @@ const Home = ({navigation}) => {
 
 
   return (
-    <View style={global.container}>
+    <View>
       <FlatList
         data={tasks}
         renderItem={({item}) => (
-          <TouchableOpacity onPress={() => navigation.navigate("Task", item)}>
+          <TouchableOpacity style={global.container} onPress={() => navigation.navigate("Task", item)}>
             <Text>{item.task}</Text>
           </TouchableOpacity>
         )}
