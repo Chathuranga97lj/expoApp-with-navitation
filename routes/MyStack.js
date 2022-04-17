@@ -21,7 +21,7 @@ const MyStack = () => {
     > 
 
         <Stack.Screen name = "Home" component={Home}/>
-        <Stack.Screen name = "Task" component={Task}/>
+        <Stack.Screen name = "Task" component={Task} options={({route}) => ({title:route.params.task})}/>
         <Stack.Screen name = "About" component={About}/>
     </Stack.Navigator>
   )
