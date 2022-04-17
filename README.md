@@ -11,3 +11,7 @@ expo install react-native-screens react-native-safe-area-context
 ## Installing the native stack navigator library
 
 npm install @react-navigation/native-stack
+
+## Drawer Navigator
+
+npm install @react-navigation/drawer

@@ -1,30 +1,38 @@
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import React from 'react'
 import About from '../screens/About'
-import Home from '../screens/Home'
 import Task from '../screens/Task'
+import Home from '../screens/Home'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 const Stack = createNativeStackNavigator();
 
-const MyStack = () => {
-  return (
-    <Stack.Navigator
-      screenOptions={{
-        headerStyle: {
-          backgroundColor: 'purple'  
-        },
-        headerTintColor: 'white',
-        headerTitleStyle: {
-          fontWeight: 'bold'
-        }
-      }}
-    > 
+const screenOptionStyle ={
+  headerStyle: {
+    backgroundColor: 'purple'  
+  },
+  headerTintColor: 'white',
+  headerTitleStyle: {
+    fontWeight: 'bold'
+  }
+}
 
-        <Stack.Screen name = "Home" component={Home}/>
-        <Stack.Screen name = "Task" component={Task} options={({route}) => ({title:route.params.task})}/>
-        <Stack.Screen name = "About" component={About}/>
+const AboutStack = () => {
+  return(
+    <Stack.Navigator screenOptions={screenOptionStyle}>
+      <Stack.Screen name="About" component={About} />
     </Stack.Navigator>
   )
 }
 
-export default MyStack
+const HomeStack = () => {
+  return (
+    <Stack.Navigator screenOptions={screenOptionStyle}> 
+
+        <Stack.Screen name = "Home" component={Home}/>
+        <Stack.Screen name = "Task" component={Task} options={({route}) => ({title:route.params.task})}/>
+        
+    </Stack.Navigator>
+  )
+}
+
+export {HomeStack, AboutStack}
