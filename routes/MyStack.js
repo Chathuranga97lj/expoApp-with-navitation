@@ -2,7 +2,8 @@ import React from 'react'
 import About from '../screens/About'
 import Task from '../screens/Task'
 import Home from '../screens/Home'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 
 const Stack = createNativeStackNavigator();
 
