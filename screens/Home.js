@@ -1,13 +1,13 @@
-import { View, Text, Button, FlatList, TouchableOpacity } from 'react-native'
+import { View, Text, FlatList, TouchableOpacity } from 'react-native'
 import React, {useState} from 'react'
 import { global } from '../styles/global'
 
 const Home = ({navigation}) => {
 
   const [tasks, setTasks] = useState([
-    {"task":"HTML", "done":true, "id":"1"},
-    {"task":"CSS", "done":true, "id":"2"},
-    {"task":"JS", "done":true, "id":"3"}
+    {"task":"Computer Network", "done":true, "id":"1"},
+    {"task":"Object Oriented Programming", "done":true, "id":"2"},
+    {"task":"Web Development", "done":true, "id":"3"}
   ])
 
 
