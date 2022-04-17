@@ -5,7 +5,7 @@ import { global } from '../styles/global'
 const Task = ({navigation}) => {
 
   const goToHome = () => {
-    navigation.push("Home")
+    navigation.goBack();
   }
 
   return (
